@@ -27,6 +27,22 @@ userModel.getById = (id)=>{
     }
 }
 
+userModel.addNew = ( {useremail,userpswd,usernames} )=>{
+    var newUser = Object.assign(
+    {},
+    userTemplate,
+    {
+        userEmail:useremail,
+        userPswd:userpswd,
+        userCompletename:usernames,
+        userdateCreated: new Date().getTime()
+    }
+);
+    newUser.userID = userCollection.length + 1;
+    userCollection.push(newUser);
+    return newUser;
+}
+
 userCollection.push(
     Object.assign(
         {},
