@@ -38,6 +38,17 @@ router.post('/users/new', (req,res)=>{
     return res.status(200).json(newUser);
 }); //post users/new
 
+router.put('/users/upd/:id', (req, res)=>{
+    var id = parseInt(req.params.id);
+    var updUser = userModel.update( id, req.body);
+    return res.status(200).json(updUser);
+});
+
+router.delete('/users/del/:id', (req,res)=>{
+    var id = parseInt(req.params.id);
+    userModel.deleteByCode(id);
+    res.status(200).json({"deleted":true});
+});//delete
 
 
 module.exports = router;

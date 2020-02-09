@@ -1,0 +1,194 @@
+{
+	"info": {
+		"_postman_id": "0ee5464a-e835-4f8c-b4cc-5a2d35479d6b",
+		"name": "seguridad",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/api/seguridad/users/all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/seguridad/users/all",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"seguridad",
+						"users",
+						"all"
+					]
+				},
+				"description": "obtener todos los nodos de "
+			},
+			"response": []
+		},
+		{
+			"name": "api/seguridad/users/:id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/seguridad/users/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"seguridad",
+						"users",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				},
+				"description": "obtiene usuario porcodigo"
+			},
+			"response": []
+		},
+		{
+			"name": "/api/seguridad/users/new",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "useremail",
+							"value": "yo@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "userpswd",
+							"value": "Operat2",
+							"type": "text"
+						},
+						{
+							"key": "usernames",
+							"value": "YoUwuw",
+							"type": "text"
+						},
+						{
+							"key": "lerolero",
+							"value": "lero candelero",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/seguridad/users/new",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"seguridad",
+						"users",
+						"new"
+					]
+				},
+				"description": "agreg nuevo usuario a la tabla de usuario"
+			},
+			"response": []
+		},
+		{
+			"name": "/api/seguridad/users/upd/:id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "userpswd",
+							"value": "Updated2",
+							"type": "text"
+						},
+						{
+							"key": "usernames",
+							"value": "updated",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/seguridad/users/upd/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"seguridad",
+						"users",
+						"upd",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				},
+				"description": "params 2 y body usernames y userpswd"
+			},
+			"response": []
+		},
+		{
+			"name": "/api/seguridad/users/del/:id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/seguridad/users/del/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"seguridad",
+						"users",
+						"del",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				},
+				"description": "elimina id y registro"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
